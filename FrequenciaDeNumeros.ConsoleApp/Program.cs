@@ -35,6 +35,19 @@ namespace FrequenciaDeNumeros.ConsoleApp
                 arrayNumeros = new int[quantidadeNumeros];
                 inputNumerosNaArray = new string[quantidadeNumeros];
 
+                if (quantidadeNumeros < 1 || quantidadeNumeros > 2000)
+                {
+                    Console.WriteLine("");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Selecione um numero entre 1 e 2000!");
+                    Console.ResetColor();
+                    Console.WriteLine("");
+                    Console.WriteLine("Aperte ENTER para prosseguir.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    continue;
+                }
+
                 Console.WriteLine("");
 
                 Console.WriteLine("Digite o numero e aperte ENTER.");
